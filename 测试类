@@ -1,0 +1,24 @@
+#include"tabtenn1.h"
+int main()
+{
+	using std::cout,std::endl;
+	TableTennisPlayer player1("Tara","Boomdea",true);
+	RatedPlayer rplayer(1140, "lcx", "ddooo", true);
+	rplayer = player1;
+	rplayer.Name();
+	if(rplayer.HasTable())cout<<":has a table.\n";
+	else cout<<": hasnt a table.\n";
+	RatedPlayer lcx(player1);
+	cout<<lcx.Rating()<<endl;
+	player1.Name(); 
+	if (player1.HasTable())cout << ":has a table.\n";
+	else cout << ": has not a table.\n";
+	cout<<"name:";
+	rplayer.Name();
+	cout<<";rating: "<<rplayer.Rating()<<endl;
+	RatedPlayer rplayer1(1212, player1);
+	cout << "name:";
+	rplayer1.Name();
+	cout << ";rating: " << rplayer1.Rating() << endl;
+	return 0 ;
+}
